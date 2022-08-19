@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eeeddd;
+}
+
+/* sidebar */
+.sidebar {
+  z-index: 1111;
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #042331;
+  transition: 0.5s;
+}
+.sidebar header {
+  padding: 10px;
+  color: white;
+  font-size: 22px;
+  line-height: 60px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #063146;
+  user-select: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.cari input {
+  width: 90%;
+}
+
+.search {
+  background-color: #063146;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#search {
+  padding-left: 5px;
+  font-size: 16px;
+}
+#search:focus {
+  padding-left: 5px;
+  outline: none;
+}
+.sidebar .search .btn-search {
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid white;
+}
+
+#btn-menu {
+  background-color: #042331;
+  color: white;
+  position: fixed;
+  z-index: 1000;
+  font-size: 20px;
+  padding: 5px;
+  top: 10px;
+  left: 10px;
+  border-radius: 8px;
+  line-height: 10px;
+  transition: all 0.8s;
+}
+#btn-menu.active {
+  left: 260px;
+}
+
+/* side menu */
+.sidebar.active {
+  left: 0px;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 30px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+
+ul li:hover a {
+  padding-left: 50px;
+  background-color: #063a52;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+ul li.active a {
+  background-color: #063a52;
+}
+
+/* check */
+
+section {
+  height: 100vh;
+  transition: all 0.5s;
+}
+.content.active {
+  margin-left: 250px;
+}
+.content-header {
+  margin-top: 10px;
+  background-color: rgb(194, 189, 189);
+  color: #042331;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.main-content {
+  border: 1px solid rgb(194, 189, 189);
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.main-content h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+/* btn */
+.mybtn {
+  border-radius: 8px;
+  padding: 6px;
+  line-height: 10px;
+}
+
+/* dropdown */
+.my-drop {
+  background-color: #01131b;
+}
+.sidebar .mydrop .drop-icon {
+  right: 1px;
+  position: absolute;
+}
+.my-drop :hover {
+  background-color: #045a81;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+.sidebar .mydrop .my-drop {
+  list-style: none;
+  display: none;
+  transition: 0.3s;
+}
+.sidebar .mydrop:hover .my-drop {
+  display: block;
+}
+
+/* pengguna */
+.tabel {
+  width: 95%;
+  margin: 8px 0;
+}
+.tabel thead {
+  text-align: center;
+}
+.tabel th,
+.tabel td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tabel td:first-child {
+  width: 50px;
+  text-align: center;
+}
+.tabel td:nth-last-child(2) {
+  width: 250px;
+  text-align: center;
+}
+.tabel td:last-child {
+  width: 150px;
+  text-align: center;
+}
+
+/* image */
+section .image {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.footer {
+  background-color: #33667e !important;
+}
+
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: 30px;
+  right: 15px;
+  opacity: 0.5;
+  font-size: 90px;
+}
+
+/* responsive */
+
+@media (max-width: 767px) {
+  .sidebar {
+    margin-left: 0px;
+    position: fixed;
+    min-height: 100vh;
+    z-index: 1000;
+  }
+}
